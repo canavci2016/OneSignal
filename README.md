@@ -1,19 +1,18 @@
 # pushNotification
 onesignal service push notifications
 
-onesignal.com sunduğu push notificationslarda kullanırız.
+we use the notficiation services which is served by onesignal
 
-client tarafındaki kullanımı;
+on client side usage:
 https://documentation.onesignal.com/docs/web-push-sdk
 
-config.php dosyası tum ayarların yapıldığı dosyadır..
+as shown below. we just need following ambigious three fields then we might be able to test whether or not class works
 
+require 'CURL.php'; 
 
-require 'CURL.php';  //sadece curl kutuphanesini kullanır..
 require 'OneSignal.php';
 
-
-$oneSignal = new  OneSignal('CONFIG_PHP_PATH');
+$oneSignal = new  OneSignal(APP_ID, API_KEY,AUTH_TOKEN);
 
 ECHO $oneSignal->viewNotifications(2,5);
 
